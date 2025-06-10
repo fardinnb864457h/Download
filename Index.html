@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FR SUPER FLASH 3388</title>
+  <link rel="icon" type="image/x-icon" href="https://i.ibb.co/nNYwd0XZ/file-00000000904861f691e86cdd37f70ca3.png" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #1a1a2e;
+      color: white;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+    header .menu-icon, header .search-icon {
+      font-size: 24px;
+      cursor: pointer;
+      user-select: none;
+    }
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: red;
+      font-weight: bold;
+      font-size: 20px;
+      text-shadow: 1px 1px #000;
+      user-select: none;
+    }
+    .logo-img {
+      height: 40px;
+      width: auto;
+    }
+    /* search bar styling */
+    .search-bar {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      padding: 10px 15px;
+      border-radius: 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .card {
+      background-color: white;
+      margin: 15px;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+    .card a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      padding: 10px;
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+    .card-title {
+      color: black;
+      font-weight: bold;
+      font-size: 20px;
+      margin: 5px 0;
+    }
+    .card-subtitle {
+      color: #00b894;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .card-description {
+      font-size: 14px;
+      color: #555;
+    }
+    .card:hover {
+      transform: scale(1.01);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
 
+  <header>
+    <div class="menu-icon">&#9776;</div>
+    <div class="logo">
+      <img src="https://i.ibb.co/gb5Bzqx1/frsuperflash3388.png" alt="Logo" class="logo-img" />
+      FR SUPER FLASH 3388
+    </div>
+    <div class="search-icon" onclick="toggleSearch()">&#128269;</div>
+    <div class="search-bar" id="searchBar">
+      <input type="text" placeholder="Search...">
+    </div>
+  </header>
+
+  <div class="card">
+    <a href="https://frsuperflash3388.netlify.app/" target="_blank">
+      <img src="https://i.ibb.co/gb5Bzqx1/frsuperflash3388.png" alt="FR SUPER FLASH 3388">
+      <div class="card-subtitle">FR SUPER FLASH 3388</div>
+      <div class="card-title">FR SUPER FLASH 3388</div>
+      <div class="card-description">
+        FR SUPER FLASH 3388 Version: 3.4 Size: 29 MB Download
+      </div>
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="https://frsuperflash3388tv.netlify.app/" target="_blank">
+      <img src="https://i.ibb.co/q3ZnyC37/IMG-20250522-191410.jpg" alt="FR SUPER FLASH 3388 TV">
+      <div class="card-subtitle">FR SUPER FLASH 3388 TV CHANNEL</div>
+      <div class="card-title">FR SUPER FLASH 3388 TV CHANNEL</div>
+    </a>
+  </div>
+
+  <script>
+    function toggleSearch() {
+      var bar = document.getElementById("searchBar");
+      if (bar.style.display === "none" || bar.style.display === "") {
+        bar.style.display = "block";
+      } else {
+        bar.style.display = "none";
+      }
+    }
+
+    const searchInput = document.querySelector('.search-bar input');
+    const cards = document.querySelectorAll('.card');
+
+    searchInput.addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+
+      cards.forEach(card => {
+        const title = card.querySelector('.card-title')?.textContent.toLowerCase() || "";
+        const subtitle = card.querySelector('.card-subtitle')?.textContent.toLowerCase() || "";
+        const description = card.querySelector('.card-description')?.textContent.toLowerCase() || "";
+
+        if (title.includes(query) || subtitle.includes(query) || description.includes(query)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
